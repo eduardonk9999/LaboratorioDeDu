@@ -1,0 +1,79 @@
+##############################################
+# LABORATORIO DE DU — .GITIGNORE PROFISSIONAL
+# WordPress + Docker + WSL
+##############################################
+
+# ==========================
+# WORDPRESS (core)
+# ==========================
+wordpress/
+wp-admin/
+wp-includes/
+
+# ==========================
+# WORDPRESS — arquivos gerados
+# ==========================
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backups/
+wp-content/sessions/
+wp-content/ai1wm-backups/
+
+# ==========================
+# THEMES & PLUGINS
+# ==========================
+# Ignora todos os temas e plugins…
+wp-content/themes/*
+wp-content/plugins/*
+
+# …exceto seus temas/plugins customizados:
+!wp-content/themes/laboratoriodedu/
+!wp-content/plugins/laboratoriodedu-*/
+
+# (Se criar mais temas/plugins próprios basta repetir acima)
+
+# ==========================
+# DEPENDÊNCIAS (Composer / Node)
+# ==========================
+vendor/
+node_modules/
+
+# ==========================
+# DOCKER
+# ==========================
+db_data/
+docker-data/
+*.pid
+
+# ==========================
+# LOGS E TEMP
+# ==========================
+*.log
+*.tmp
+*.temp
+
+# ==========================
+# DUMPS DE BANCO
+# ==========================
+*.sql
+*.sql.gz
+*.tar
+*.tar.gz
+*.zip
+
+# ==========================
+# SISTEMA / EDITOR
+# ==========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================
+# WSL / AMBIENTE
+# ==========================
+.env
+.env.*
