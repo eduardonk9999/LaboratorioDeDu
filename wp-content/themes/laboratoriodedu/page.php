@@ -9,6 +9,7 @@ if (have_posts()) :
     while (have_posts()) : the_post(); ?>
         <article class="post-card">
             <h1 class="post-card-title"><?php the_title(); ?></h1>
+            <p>AQUI É A HOME?</p>
             <div class="post-content">
                 <?php the_content(); ?>
             </div>

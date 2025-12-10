@@ -4,13 +4,19 @@ if (!defined('ABSPATH')) {
 }
 
 get_header();
+?>
 
-if (have_posts()) :
-    while (have_posts()) : the_post();
-        get_template_part('template-parts/content');
-    endwhile;
-else :
-    echo '<p>Nada por aqui ainda.</p>';
-endif;
+<section class="spline-container">
+    <iframe 
+        src='https://my.spline.design/thepc-f2Geq6HLnsdnlspIv4toq5yp/' 
+        frameborder='0' 
+        width='100%' 
+        height='100%'
+        title="Animação 3D - The PC"
+        loading="lazy"
+        allow="fullscreen"
+    ></iframe>
+</section>
 
+<?php
 get_footer();

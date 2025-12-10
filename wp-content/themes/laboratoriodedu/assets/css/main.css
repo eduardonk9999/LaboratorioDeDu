@@ -15,9 +15,322 @@
     margin-top: 12px;
     font-size: 14px;
 }
-.site-nav ul {
+
+.site-nav ul,
+.menu-primary {
     list-style: none;
     padding-left: 0;
+    margin: 0;
     display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.site-nav a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 14px;
+    position: relative;
+    padding: 4px 0;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+    color: #36ff99;
+}
+
+.site-nav .current-menu-item > a,
+.site-nav .current_page_item > a {
+    color: #36ff99;
+}
+
+/* Indicador visual para item ativo */
+.site-nav .current-menu-item > a::after,
+.site-nav .current_page_item > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #36ff99;
+}
+
+/* ============================================
+   SPLINE CONTAINER - Home Page
+   ============================================ */
+
+.spline-container {
+    width: 100%;
+    height: calc(100vh - 200px);
+    min-height: 600px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    background: #050608;
+}
+
+.spline-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Ajustes para home page */
+body.home .site-main {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body.home .site-main {
+    padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .spline-container {
+        height: calc(100vh - 150px);
+        min-height: 400px;
+    }
+}
+
+/* ============================================
+   TERMINAL STYLE - About Page
+   ============================================ */
+
+.terminal-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.terminal-window {
+    background: #0a0e14;
+    border: 1px solid #1a2332;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(54, 255, 153, 0.1);
+}
+
+.terminal-header {
+    background: #1a2332;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
     gap: 12px;
+    border-bottom: 1px solid #0a0e14;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-buttons .btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-close {
+    background: #ff5f56;
+}
+
+.btn-minimize {
+    background: #ffbd2e;
+}
+
+.btn-maximize {
+    background: #27c93f;
+}
+
+.terminal-title {
+    color: #888;
+    font-size: 12px;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    flex: 1;
+    text-align: center;
+}
+
+.terminal-body {
+    padding: 24px;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #36ff99;
+    background: #0a0e14;
+    min-height: 500px;
+}
+
+.terminal-command-group {
+    margin-bottom: 16px;
+}
+
+.terminal-line {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.prompt {
+    color: #36ff99;
+    font-weight: 600;
+}
+
+.command {
+    color: #fff;
+    margin-left: 8px;
+}
+
+.output {
+    color: #a8d8b9;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.cursor-blink {
+    animation: blink 1s infinite;
+    color: #36ff99;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* About Content Styles */
+.about-content {
+    color: #a8d8b9;
+    margin-top: 12px;
+}
+
+.about-content p {
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.about-content .section-title {
+    color: #36ff99;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.about-content ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+.about-content ul li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.about-content ul li::before {
+    content: "▸";
+    color: #36ff99;
+    position: absolute;
+    left: 0;
+}
+
+.about-content .quote {
+    color: #888;
+    font-style: italic;
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #36ff99;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #0f1a1f;
+    border: 1px solid #36ff99;
+    border-radius: 4px;
+    color: #36ff99;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.skill-tag:hover {
+    background: #36ff99;
+    color: #0a0e14;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(54, 255, 153, 0.3);
+}
+
+/* Ajustes para página About */
+body.page-template-about-terminal .site-main {
+    max-width: 100%;
+    padding: 0;
+}
+
+body.page-template-about-terminal .terminal-container {
+    padding: 32px 16px;
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .terminal-body {
+        font-size: 12px;
+        padding: 16px;
+    }
+    
+    .terminal-container {
+        margin: 20px auto;
+    }
+    
+    .skills-grid {
+        gap: 6px;
+    }
+    
+    .skill-tag {
+        font-size: 11px;
+        padding: 3px 10px;
+    }
+    
+    .terminal-title {
+        font-size: 10px;
+    }
+    
+    .prompt {
+        font-size: 11px;
+    }
 }
