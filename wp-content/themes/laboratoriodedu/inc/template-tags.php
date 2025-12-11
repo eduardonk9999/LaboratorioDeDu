@@ -27,5 +27,16 @@ function laboratoriodedu_default_menu()
         echo '<li><a href="' . esc_url(get_permalink($about_page[0]->ID)) . '">Quem sou eu</a></li>';
     }
     
+    // Busca página "Projetos" ou com template Projetos
+    $projetos_page = get_pages([
+        'meta_key'   => '_wp_page_template',
+        'meta_value' => 'page-templates/projetos.php',
+        'number'     => 1,
+    ]);
+    
+    if (!empty($projetos_page)) {
+        echo '<li><a href="' . esc_url(get_permalink($projetos_page[0]->ID)) . '">Projetos</a></li>';
+    }
+    
     echo '</ul>';
 }

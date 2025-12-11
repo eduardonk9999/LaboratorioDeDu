@@ -54,6 +54,7 @@ get_header();
                             <h2 class="section-title">Backend:</h2>
                             <ul>
                                 <li>Java e Spring Boot - APIs REST robustas, seguras e bem estruturadas</li>
+                                <li>Python - Manipulação de dados e scripts para automatizar tarefas</li>
                             </ul>
                         </section>
                         
@@ -62,6 +63,7 @@ get_header();
                             <ul>
                                 <li>JavaScript, React e Next.js - Interfaces modernas e responsivas</li>
                                 <li>GraphQL - Otimização da comunicação entre frontend e backend</li>
+                                <li>Sites responsivos de alta performance e SEO com WordPress</li>
                             </ul>
                         </section>
                         
@@ -107,10 +109,12 @@ get_header();
                     <nav class="skills-grid" aria-label="Habilidades técnicas">
                         <span class="skill-tag">Java</span>
                         <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Python</span>
                         <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">React</span>
                         <span class="skill-tag">Next.js</span>
                         <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">WordPress</span>
                         <span class="skill-tag">SQL</span>
                         <span class="skill-tag">DevOps</span>
                         <span class="skill-tag">Hardware Hacking</span>

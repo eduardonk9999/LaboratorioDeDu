@@ -24,12 +24,16 @@ if (!defined('ABSPATH')) {
 
     <nav class="site-nav" role="navigation" aria-label="Menu principal">
         <?php
-        wp_nav_menu([
-            'theme_location' => 'primary',
-            'container'      => false,
-            'fallback_cb'    => 'laboratoriodedu_default_menu',
-            'menu_class'     => 'menu-primary',
-        ]);
+        if (has_nav_menu('primary')) {
+            wp_nav_menu([
+                'theme_location' => 'primary',
+                'container'      => false,
+                'menu_class'     => 'menu-primary',
+                'fallback_cb'    => false,
+            ]);
+        } else {
+            laboratoriodedu_default_menu();
+        }
         ?>
     </nav>
 </header>
