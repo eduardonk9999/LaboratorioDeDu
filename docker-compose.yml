@@ -27,6 +27,8 @@ services:
       WORDPRESS_DB_PASSWORD: du_pass
       WORDPRESS_DB_NAME: laboratoriodedu
       WORDPRESS_DEBUG: 1
+      WORDPRESS_DEBUG_DISPLAY: 0
+      WORDPRESS_DEBUG_LOG: 1
     volumes:
       - ./wp-content:/var/www/html/wp-content
 

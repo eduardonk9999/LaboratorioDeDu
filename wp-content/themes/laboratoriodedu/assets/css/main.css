@@ -1,4 +1,10 @@
-.site-title a {
+.site-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.site-title a:first-child {
     font-family: "JetBrains Mono", "Fira Code", monospace;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -14,6 +20,8 @@
 .site-nav {
     margin-top: 12px;
     font-size: 14px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .site-nav ul,
@@ -55,6 +63,116 @@
     width: 100%;
     height: 2px;
     background: #36ff99;
+}
+
+/* Header Layout */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.site-branding {
+    flex: 1;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Site Icon (sem link) */
+.site-icon {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* LinkedIn Link */
+a.linkedin-link {
+    color: #36ff99;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.2s;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+a.linkedin-link:hover {
+    transform: translateY(-2px);
+    color: #a8d8b9;
+}
+
+a.linkedin-link svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+}
+
+/* Footer Layout */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-left {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Footer LinkedIn */
+.site-footer .linkedin-link {
+    margin: 0;
+}
+
+.site-footer .site-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 8px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .footer-left {
+        justify-content: center;
+    }
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .site-nav {
+        margin-top: 0;
+    }
 }
 
 /* ============================================
